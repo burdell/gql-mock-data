@@ -2,17 +2,17 @@
 
 export const GetFriends = {
   friendsList: [
-    { first_name: 'Ervin', last_name: 'Daugherty', school: 'georgia_tech' },
-    { first_name: 'Marguerite', last_name: 'Davis', school: 'georgia_tech' }
+    { first_name: 'Bryon', last_name: 'Hansen', school: 'hogwarts' },
+    { first_name: 'Nakia', last_name: 'Kuhn', school: 'hogwarts' }
   ]
 }
 
 export const ElectMemeLord = {
   electMemeLord: {
-    first_name: 'Izaiah',
-    last_name: 'Russel',
-    favorite_meme: 'arthur_clenching_hand',
-    times_won_memelord: 29,
+    first_name: 'Gaetano',
+    last_name: 'Breitenberg',
+    favorite_meme: 'is_this_butterfly',
+    times_won_memelord: 159,
     nickname: 'Hello World'
   }
 }

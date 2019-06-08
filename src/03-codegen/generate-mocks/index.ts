@@ -1,31 +1,29 @@
-import { GraphQLSchema, print } from 'graphql'
+import { GraphQLSchema, print, graphql } from 'graphql'
 import { Types, PluginFunction } from '@graphql-codegen/plugin-helpers'
 
 import { GatherGQLOperation, GatherMockedData } from './types'
-import { mockSchema, querySchema } from './schema'
+import { mockSchema } from './schema'
 import { OperationConfig } from './operation-config'
 
 export const plugin: PluginFunction = async (
   schema: GraphQLSchema,
   documents: Types.DocumentFile[]
 ) => {
-  const operations = getOperations(documents)
-
   const mockedSchema = mockSchema(schema)
-  const mockData: GatherMockedData = {}
 
+  const operations = getOperations(documents)
+  const mockData: GatherMockedData = {}
   await asyncForEach(operations, async operation => {
     const operationConfig = OperationConfig[operation.name] || {}
-    const operationInput = operationConfig.input
-    const operationName = operation.name
 
+    const operationInput = operationConfig.input
     if (operation.variables.length === 0 || operationInput) {
-      const result = await querySchema({
+      const result = await graphql({
         schema: mockedSchema,
         source: operation.operationString,
         variableValues: operationInput
       })
-      mockData[operationName] = result.data
+      mockData[operation.name] = result.data
     }
   })
 

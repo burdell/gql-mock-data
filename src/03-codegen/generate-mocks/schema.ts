@@ -1,4 +1,4 @@
-import { graphql, GraphQLArgs, GraphQLSchema } from 'graphql'
+import { GraphQLSchema } from 'graphql'
 import { printSchema } from 'graphql/utilities/schemaPrinter'
 import { makeExecutableSchema, addMockFunctionsToSchema } from 'graphql-tools'
 
@@ -12,8 +12,4 @@ export function mockSchema(schema: GraphQLSchema, mocks = {}) {
   })
 
   return mockedSchema
-}
-
-export async function querySchema(args: GraphQLArgs) {
-  return graphql(args)
 }
