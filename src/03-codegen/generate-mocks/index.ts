@@ -2,7 +2,7 @@ import { GraphQLSchema, print, graphql } from 'graphql'
 import { Types, PluginFunction } from '@graphql-codegen/plugin-helpers'
 
 import { GatherGQLOperation, GatherMockedData } from './types'
-import { mockSchema } from './schema'
+import { mockSchema, addMocks } from './schema'
 import { OperationConfig } from './operation-config'
 
 export const plugin: PluginFunction = async (
@@ -10,13 +10,15 @@ export const plugin: PluginFunction = async (
   documents: Types.DocumentFile[]
 ) => {
   const mockedSchema = mockSchema(schema)
-
   const operations = getOperations(documents)
   const mockData: GatherMockedData = {}
+
   await asyncForEach(operations, async operation => {
     const operationConfig = OperationConfig[operation.name] || {}
-
     const operationInput = operationConfig.input
+
+    addMocks(mockedSchema, operationConfig.mocks)
+
     if (operation.variables.length === 0 || operationInput) {
       const result = await graphql({
         schema: mockedSchema,
@@ -63,7 +65,7 @@ function generateTSFile(things: GatherMockedData) {
   let file = '// 🤖 THIS IS A GENERATED FILE 🤖 \n\n\n\n\n'
 
   const thingNames = Object.keys(things)
-  thingNames.forEach((thingName, i) => {
+  thingNames.forEach(thingName => {
     const thing = things[thingName]
     const tsString = `export const ${thingName} = ${JSON.stringify(thing)};`
     file = file + `${tsString}\n\n`

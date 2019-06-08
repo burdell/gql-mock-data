@@ -7,6 +7,7 @@ export interface GatherGQLOperation {
 interface GatherOperationConfig {
   [operationName: string]: {
     input?: { [inputVar: string]: any }
+    mocks?: any
   }
 }
 
