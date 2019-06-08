@@ -1,0 +1,8 @@
+mutation ElectMemeLord($memeLord: String) {
+    electMemeLord(memeLord: $memeLord) {
+      first_name
+      last_name
+      favorite_meme
+      times_won_memelord
+    }
+  }

@@ -1,0 +1,16 @@
+{
+  "data": {
+    "friendsList": [
+      {
+        "first_name": "Trever",
+        "last_name": "Lehner",
+        "school": "hogwarts"
+      },
+      {
+        "first_name": "Zaria",
+        "last_name": "Berge",
+        "school": "hogwarts"
+      }
+    ]
+  }
+}

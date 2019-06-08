@@ -1,0 +1,7 @@
+query GetFriends {
+    friendsList {
+      first_name
+      last_name
+      school
+    }
+  }

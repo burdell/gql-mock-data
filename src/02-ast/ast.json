@@ -1,0 +1,232 @@
+{
+  "kind": "Document",
+  "definitions": [
+    {
+      "kind": "OperationDefinition",
+      "operation": "query",
+      "name": {
+        "kind": "Name",
+        "value": "GetFriends",
+        "loc": { "start": 9, "end": 19 }
+      },
+      "variableDefinitions": [
+        {
+          "kind": "VariableDefinition",
+          "variable": {
+            "kind": "Variable",
+            "name": {
+              "kind": "Name",
+              "value": "school",
+              "loc": { "start": 21, "end": 27 }
+            },
+            "loc": { "start": 20, "end": 27 }
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String",
+              "loc": { "start": 29, "end": 35 }
+            },
+            "loc": { "start": 29, "end": 35 }
+          },
+          "directives": [],
+          "loc": { "start": 20, "end": 35 }
+        }
+      ],
+      "directives": [],
+      "selectionSet": {
+        "kind": "SelectionSet",
+        "selections": [
+          {
+            "kind": "Field",
+            "name": {
+              "kind": "Name",
+              "value": "getFriendList",
+              "loc": { "start": 43, "end": 56 }
+            },
+            "arguments": [
+              {
+                "kind": "Argument",
+                "name": {
+                  "kind": "Name",
+                  "value": "school",
+                  "loc": { "start": 57, "end": 63 }
+                },
+                "value": {
+                  "kind": "Variable",
+                  "name": {
+                    "kind": "Name",
+                    "value": "scrool",
+                    "loc": { "start": 66, "end": 72 }
+                  },
+                  "loc": { "start": 65, "end": 72 }
+                },
+                "loc": { "start": 57, "end": 72 }
+              }
+            ],
+            "directives": [],
+            "selectionSet": {
+              "kind": "SelectionSet",
+              "selections": [
+                {
+                  "kind": "Field",
+                  "name": {
+                    "kind": "Name",
+                    "value": "first_name",
+                    "loc": { "start": 82, "end": 92 }
+                  },
+                  "arguments": [],
+                  "directives": [],
+                  "loc": { "start": 82, "end": 92 }
+                },
+                {
+                  "kind": "Field",
+                  "name": {
+                    "kind": "Name",
+                    "value": "last_name",
+                    "loc": { "start": 99, "end": 108 }
+                  },
+                  "arguments": [],
+                  "directives": [],
+                  "loc": { "start": 99, "end": 108 }
+                }
+              ],
+              "loc": { "start": 74, "end": 114 }
+            },
+            "loc": { "start": 43, "end": 114 }
+          }
+        ],
+        "loc": { "start": 37, "end": 118 }
+      },
+      "loc": { "start": 3, "end": 118 }
+    },
+    {
+      "kind": "OperationDefinition",
+      "operation": "mutation",
+      "name": {
+        "kind": "Name",
+        "value": "ElectMemeLord",
+        "loc": { "start": 133, "end": 146 }
+      },
+      "variableDefinitions": [
+        {
+          "kind": "VariableDefinition",
+          "variable": {
+            "kind": "Variable",
+            "name": {
+              "kind": "Name",
+              "value": "person",
+              "loc": { "start": 148, "end": 154 }
+            },
+            "loc": { "start": 147, "end": 154 }
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "Person",
+              "loc": { "start": 156, "end": 162 }
+            },
+            "loc": { "start": 156, "end": 162 }
+          },
+          "directives": [],
+          "loc": { "start": 147, "end": 162 }
+        }
+      ],
+      "directives": [],
+      "selectionSet": {
+        "kind": "SelectionSet",
+        "selections": [
+          {
+            "kind": "Field",
+            "name": {
+              "kind": "Name",
+              "value": "getSaltType",
+              "loc": { "start": 170, "end": 181 }
+            },
+            "arguments": [
+              {
+                "kind": "Argument",
+                "name": {
+                  "kind": "Name",
+                  "value": "person",
+                  "loc": { "start": 182, "end": 188 }
+                },
+                "value": {
+                  "kind": "Variable",
+                  "name": {
+                    "kind": "Name",
+                    "value": "person",
+                    "loc": { "start": 191, "end": 197 }
+                  },
+                  "loc": { "start": 190, "end": 197 }
+                },
+                "loc": { "start": 182, "end": 197 }
+              }
+            ],
+            "directives": [],
+            "selectionSet": {
+              "kind": "SelectionSet",
+              "selections": [
+                {
+                  "kind": "Field",
+                  "alias": {
+                    "kind": "Name",
+                    "value": "name",
+                    "loc": { "start": 207, "end": 211 }
+                  },
+                  "name": {
+                    "kind": "Name",
+                    "value": "String",
+                    "loc": { "start": 213, "end": 219 }
+                  },
+                  "arguments": [],
+                  "directives": [],
+                  "loc": { "start": 207, "end": 219 }
+                },
+                {
+                  "kind": "Field",
+                  "alias": {
+                    "kind": "Name",
+                    "value": "timesWon",
+                    "loc": { "start": 226, "end": 234 }
+                  },
+                  "name": {
+                    "kind": "Name",
+                    "value": "Int",
+                    "loc": { "start": 236, "end": 239 }
+                  },
+                  "arguments": [],
+                  "directives": [],
+                  "loc": { "start": 226, "end": 239 }
+                },
+                {
+                  "kind": "Field",
+                  "alias": {
+                    "kind": "Name",
+                    "value": "favoriteMeme",
+                    "loc": { "start": 246, "end": 258 }
+                  },
+                  "name": {
+                    "kind": "Name",
+                    "value": "Meme",
+                    "loc": { "start": 260, "end": 264 }
+                  },
+                  "arguments": [],
+                  "directives": [],
+                  "loc": { "start": 246, "end": 264 }
+                }
+              ],
+              "loc": { "start": 199, "end": 270 }
+            },
+            "loc": { "start": 170, "end": 270 }
+          }
+        ],
+        "loc": { "start": 164, "end": 274 }
+      },
+      "loc": { "start": 124, "end": 274 }
+    }
+  ],
+  "loc": { "start": 0, "end": 276 }
+}

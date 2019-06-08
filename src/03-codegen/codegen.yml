@@ -1,0 +1,8 @@
+schema: schema.ts
+documents: './src/*.graphql'
+overwrite: true
+require:
+  - ts-node/register
+generates:
+  mock-data.ts:
+    - generate-mocks

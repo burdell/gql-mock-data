@@ -1,0 +1,12 @@
+[
+  {
+    "name": "GetFriends",
+    "variables": ["school"],
+    "operationString": "query GetFriends($school: String) {\n  getFriendList(school: $scrool) {\n    first_name\n    last_name\n  }\n}"
+  },
+  {
+    "name": "ElectMemeLord",
+    "variables": ["person"],
+    "operationString": "mutation ElectMemeLord($person: Person) {\n  getSaltType(person: $person) {\n    name: String\n    timesWon: Int\n    favoriteMeme: Meme\n  }\n}"
+  }
+]
