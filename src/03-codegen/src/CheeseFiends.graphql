@@ -1,0 +1,8 @@
+query GetCheeseFiends {
+  cheeseFiends {
+    title
+    last_name
+    favorite_cheese
+    favorite_wine
+  }
+}

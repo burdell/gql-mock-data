@@ -1,6 +1,6 @@
 export interface GatherGQLOperation {
   name: string
-  variables: string[]
+  variables: Array<{ name: string; type: string }>
   operationString: string
 }
 

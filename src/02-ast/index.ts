@@ -2,23 +2,24 @@ import { parse, print } from 'graphql/language'
 import { writeToFile } from '../write-to-file'
 
 const source = `
-  query GetFriends {
-    friendsList {
-      first_name
+  query GetCheeseFiends {
+    cheeseFiends {
+      title
       last_name
-      school
+      favorite_cheese
+      favorite_wine
     }
   }
 
-  mutation ElectMemeLord($memeLord: String) {
-    electMemeLord(memeLord: $memeLord) {
-      first_name
-      last_name
-      favorite_meme
-      times_won_memelord
+  mutation ElectCheeseLord($cheeseFiendId: ID!) {
+    electCheeseLord(cheeseFiendId: $cheeseFiendId) {
+      title
+      last_name      
+      times_won_cheeselord
     }
   }
 `
+
 const ast = parse(source)
 writeToFile(ast, __dirname, 'ast.json')
 

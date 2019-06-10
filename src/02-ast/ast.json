@@ -6,34 +6,13 @@
       "operation": "query",
       "name": {
         "kind": "Name",
-        "value": "GetFriends",
-        "loc": { "start": 9, "end": 19 }
-      },
-      "variableDefinitions": [
-        {
-          "kind": "VariableDefinition",
-          "variable": {
-            "kind": "Variable",
-            "name": {
-              "kind": "Name",
-              "value": "school",
-              "loc": { "start": 21, "end": 27 }
-            },
-            "loc": { "start": 20, "end": 27 }
-          },
-          "type": {
-            "kind": "NamedType",
-            "name": {
-              "kind": "Name",
-              "value": "String",
-              "loc": { "start": 29, "end": 35 }
-            },
-            "loc": { "start": 29, "end": 35 }
-          },
-          "directives": [],
-          "loc": { "start": 20, "end": 35 }
+        "value": "GetCheeseFiends",
+        "loc": {
+          "start": 9,
+          "end": 24
         }
-      ],
+      },
+      "variableDefinitions": [],
       "directives": [],
       "selectionSet": {
         "kind": "SelectionSet",
@@ -42,29 +21,13 @@
             "kind": "Field",
             "name": {
               "kind": "Name",
-              "value": "getFriendList",
-              "loc": { "start": 43, "end": 56 }
-            },
-            "arguments": [
-              {
-                "kind": "Argument",
-                "name": {
-                  "kind": "Name",
-                  "value": "school",
-                  "loc": { "start": 57, "end": 63 }
-                },
-                "value": {
-                  "kind": "Variable",
-                  "name": {
-                    "kind": "Name",
-                    "value": "scrool",
-                    "loc": { "start": 66, "end": 72 }
-                  },
-                  "loc": { "start": 65, "end": 72 }
-                },
-                "loc": { "start": 57, "end": 72 }
+              "value": "cheeseFiends",
+              "loc": {
+                "start": 31,
+                "end": 43
               }
-            ],
+            },
+            "arguments": [],
             "directives": [],
             "selectionSet": {
               "kind": "SelectionSet",
@@ -73,41 +36,102 @@
                   "kind": "Field",
                   "name": {
                     "kind": "Name",
-                    "value": "first_name",
-                    "loc": { "start": 82, "end": 92 }
+                    "value": "title",
+                    "loc": {
+                      "start": 52,
+                      "end": 57
+                    }
                   },
                   "arguments": [],
                   "directives": [],
-                  "loc": { "start": 82, "end": 92 }
+                  "loc": {
+                    "start": 52,
+                    "end": 57
+                  }
                 },
                 {
                   "kind": "Field",
                   "name": {
                     "kind": "Name",
                     "value": "last_name",
-                    "loc": { "start": 99, "end": 108 }
+                    "loc": {
+                      "start": 64,
+                      "end": 73
+                    }
                   },
                   "arguments": [],
                   "directives": [],
-                  "loc": { "start": 99, "end": 108 }
+                  "loc": {
+                    "start": 64,
+                    "end": 73
+                  }
+                },
+                {
+                  "kind": "Field",
+                  "name": {
+                    "kind": "Name",
+                    "value": "favorite_cheese",
+                    "loc": {
+                      "start": 80,
+                      "end": 95
+                    }
+                  },
+                  "arguments": [],
+                  "directives": [],
+                  "loc": {
+                    "start": 80,
+                    "end": 95
+                  }
+                },
+                {
+                  "kind": "Field",
+                  "name": {
+                    "kind": "Name",
+                    "value": "favorite_wine",
+                    "loc": {
+                      "start": 102,
+                      "end": 115
+                    }
+                  },
+                  "arguments": [],
+                  "directives": [],
+                  "loc": {
+                    "start": 102,
+                    "end": 115
+                  }
                 }
               ],
-              "loc": { "start": 74, "end": 114 }
+              "loc": {
+                "start": 44,
+                "end": 121
+              }
             },
-            "loc": { "start": 43, "end": 114 }
+            "loc": {
+              "start": 31,
+              "end": 121
+            }
           }
         ],
-        "loc": { "start": 37, "end": 118 }
+        "loc": {
+          "start": 25,
+          "end": 125
+        }
       },
-      "loc": { "start": 3, "end": 118 }
+      "loc": {
+        "start": 3,
+        "end": 125
+      }
     },
     {
       "kind": "OperationDefinition",
       "operation": "mutation",
       "name": {
         "kind": "Name",
-        "value": "ElectMemeLord",
-        "loc": { "start": 133, "end": 146 }
+        "value": "ElectCheeseLord",
+        "loc": {
+          "start": 138,
+          "end": 153
+        }
       },
       "variableDefinitions": [
         {
@@ -116,22 +140,44 @@
             "kind": "Variable",
             "name": {
               "kind": "Name",
-              "value": "person",
-              "loc": { "start": 148, "end": 154 }
+              "value": "cheeseFiendId",
+              "loc": {
+                "start": 155,
+                "end": 168
+              }
             },
-            "loc": { "start": 147, "end": 154 }
+            "loc": {
+              "start": 154,
+              "end": 168
+            }
           },
           "type": {
-            "kind": "NamedType",
-            "name": {
-              "kind": "Name",
-              "value": "Person",
-              "loc": { "start": 156, "end": 162 }
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "ID",
+                "loc": {
+                  "start": 170,
+                  "end": 172
+                }
+              },
+              "loc": {
+                "start": 170,
+                "end": 172
+              }
             },
-            "loc": { "start": 156, "end": 162 }
+            "loc": {
+              "start": 170,
+              "end": 173
+            }
           },
           "directives": [],
-          "loc": { "start": 147, "end": 162 }
+          "loc": {
+            "start": 154,
+            "end": 173
+          }
         }
       ],
       "directives": [],
@@ -142,27 +188,42 @@
             "kind": "Field",
             "name": {
               "kind": "Name",
-              "value": "getSaltType",
-              "loc": { "start": 170, "end": 181 }
+              "value": "electCheeseLord",
+              "loc": {
+                "start": 181,
+                "end": 196
+              }
             },
             "arguments": [
               {
                 "kind": "Argument",
                 "name": {
                   "kind": "Name",
-                  "value": "person",
-                  "loc": { "start": 182, "end": 188 }
+                  "value": "cheeseFiendId",
+                  "loc": {
+                    "start": 197,
+                    "end": 210
+                  }
                 },
                 "value": {
                   "kind": "Variable",
                   "name": {
                     "kind": "Name",
-                    "value": "person",
-                    "loc": { "start": 191, "end": 197 }
+                    "value": "cheeseFiendId",
+                    "loc": {
+                      "start": 213,
+                      "end": 226
+                    }
                   },
-                  "loc": { "start": 190, "end": 197 }
+                  "loc": {
+                    "start": 212,
+                    "end": 226
+                  }
                 },
-                "loc": { "start": 182, "end": 197 }
+                "loc": {
+                  "start": 197,
+                  "end": 226
+                }
               }
             ],
             "directives": [],
@@ -171,62 +232,80 @@
               "selections": [
                 {
                   "kind": "Field",
-                  "alias": {
-                    "kind": "Name",
-                    "value": "name",
-                    "loc": { "start": 207, "end": 211 }
-                  },
                   "name": {
                     "kind": "Name",
-                    "value": "String",
-                    "loc": { "start": 213, "end": 219 }
+                    "value": "title",
+                    "loc": {
+                      "start": 236,
+                      "end": 241
+                    }
                   },
                   "arguments": [],
                   "directives": [],
-                  "loc": { "start": 207, "end": 219 }
+                  "loc": {
+                    "start": 236,
+                    "end": 241
+                  }
                 },
                 {
                   "kind": "Field",
-                  "alias": {
-                    "kind": "Name",
-                    "value": "timesWon",
-                    "loc": { "start": 226, "end": 234 }
-                  },
                   "name": {
                     "kind": "Name",
-                    "value": "Int",
-                    "loc": { "start": 236, "end": 239 }
+                    "value": "last_name",
+                    "loc": {
+                      "start": 248,
+                      "end": 257
+                    }
                   },
                   "arguments": [],
                   "directives": [],
-                  "loc": { "start": 226, "end": 239 }
+                  "loc": {
+                    "start": 248,
+                    "end": 257
+                  }
                 },
                 {
                   "kind": "Field",
-                  "alias": {
-                    "kind": "Name",
-                    "value": "favoriteMeme",
-                    "loc": { "start": 246, "end": 258 }
-                  },
                   "name": {
                     "kind": "Name",
-                    "value": "Meme",
-                    "loc": { "start": 260, "end": 264 }
+                    "value": "times_won_cheeselord",
+                    "loc": {
+                      "start": 270,
+                      "end": 290
+                    }
                   },
                   "arguments": [],
                   "directives": [],
-                  "loc": { "start": 246, "end": 264 }
+                  "loc": {
+                    "start": 270,
+                    "end": 290
+                  }
                 }
               ],
-              "loc": { "start": 199, "end": 270 }
+              "loc": {
+                "start": 228,
+                "end": 296
+              }
             },
-            "loc": { "start": 170, "end": 270 }
+            "loc": {
+              "start": 181,
+              "end": 296
+            }
           }
         ],
-        "loc": { "start": 164, "end": 274 }
+        "loc": {
+          "start": 175,
+          "end": 300
+        }
       },
-      "loc": { "start": 124, "end": 274 }
+      "loc": {
+        "start": 129,
+        "end": 300
+      }
     }
   ],
-  "loc": { "start": 0, "end": 276 }
+  "loc": {
+    "start": 0,
+    "end": 301
+  }
 }

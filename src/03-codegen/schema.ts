@@ -1,32 +1,35 @@
 import { buildSchema } from 'graphql'
 
 export const typeDefs = `
-  enum School {
-    georgia_tech
-    uga
-    hogwarts
+  enum Wine {
+    pinot_grigio
+    merlot
+    prosecco
+    strawwberrry_wine
   }
 
-  enum Meme {
-    blinking_white_guy
-    arthur_clenching_fist
-    is_this_a_butterfly
+  enum Cheese {
+    muenster
+    brie
+    paneer
+    cheez_whiz
   }
 
-  type Person {
-    first_name: String
-    last_name: String
-    school: School
-    favorite_meme: Meme
-    times_won_memelord: Int
+  type CheeseFiend {
+    id: ID!
+    title: String!
+    last_name: String!
+    favorite_wine: Wine!
+    favorite_cheese: Cheese!
+    times_won_cheeselord: Int!
   }
 
   type Query {
-    friendsList: [Person!]!
+    cheeseFiends: [CheeseFiend!]!
   }
 
   type Mutation {
-    electMemeLord(memeLord: String): Person!
+    electCheeseLord(cheeseFiendId: ID!): CheeseFiend!
   }
 
   schema {

@@ -1,12 +1,14 @@
 [
   {
-    "name": "GetFriends",
-    "variables": ["school"],
-    "operationString": "query GetFriends($school: String) {\n  getFriendList(school: $scrool) {\n    first_name\n    last_name\n  }\n}"
+    "name": "GetCheeseFiends",
+    "variables": [],
+    "operationString": "query GetCheeseFiends {\n  cheeseFiends {\n    title\n    last_name\n    favorite_cheese\n    favorite_wine\n  }\n}"
   },
   {
-    "name": "ElectMemeLord",
-    "variables": ["person"],
-    "operationString": "mutation ElectMemeLord($person: Person) {\n  getSaltType(person: $person) {\n    name: String\n    timesWon: Int\n    favoriteMeme: Meme\n  }\n}"
+    "name": "ElectCheeseLord",
+    "variables": [
+      "cheeseFiendId"
+    ],
+    "operationString": "mutation ElectCheeseLord($cheeseFiendId: ID!) {\n  electCheeseLord(cheeseFiendId: $cheeseFiendId) {\n    title\n    last_name\n    times_won_cheeselord\n  }\n}"
   }
 ]

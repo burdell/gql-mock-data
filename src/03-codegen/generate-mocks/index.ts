@@ -1,9 +1,10 @@
-import { GraphQLSchema, print, graphql } from 'graphql'
+import { GraphQLSchema, graphql } from 'graphql'
 import { Types, PluginFunction } from '@graphql-codegen/plugin-helpers'
 
-import { GatherGQLOperation, GatherMockedData } from './types'
+import { GatherMockedData } from './types'
 import { mockSchema, addMocks } from './schema'
 import { OperationConfig } from './operation-config'
+import { getOperations } from './operations'
 
 export const plugin: PluginFunction = async (
   schema: GraphQLSchema,
@@ -30,26 +31,7 @@ export const plugin: PluginFunction = async (
   })
 
   return generateTSFile(mockData)
-}
-
-function getOperations(documents: Types.DocumentFile[]) {
-  let operations: GatherGQLOperation[] = []
-  documents.forEach(document => {
-    const operation = document.content.definitions
-      .filter(def => def.kind === 'OperationDefinition')
-      .map((def: any) => ({
-        name: def.name.value,
-        variables: def.variableDefinitions.map(
-          (variable: any) => variable.variable.name.value
-        ),
-        operationString: print(def)
-      }))
-      .map(def => def)
-
-    operations = operations.concat(operation)
-  })
-
-  return operations
+  // return JSON.stringify(documents)
 }
 
 async function asyncForEach<T>(

@@ -1,34 +1,26 @@
 // 🤖 THIS IS A GENERATED FILE 🤖
 
-export const GetFriends = {
-  friendsList: [
-    { first_name: 'Demarcus', last_name: 'Sipes', school: 'uga' },
-    { first_name: 'Jarrell', last_name: 'Reilly', school: 'uga' }
-  ]
-}
-
-export const GetMemeFriends = {
-  friendsList: [
+export const GetCheeseFiends = {
+  cheeseFiends: [
     {
-      first_name: 'Kraig',
-      last_name: 'Klein',
-      favorite_meme: 'blinking_white_guy',
-      times_won_memelord: 24
+      title: 'Mr.',
+      last_name: 'Morar',
+      favorite_cheese: 'cheez_whiz',
+      favorite_wine: 'prosecco'
     },
     {
-      first_name: 'Terrance',
-      last_name: 'Wolff',
-      favorite_meme: 'arthur_clenching_fist',
-      times_won_memelord: 37
+      title: 'Mrs.',
+      last_name: 'Feeney',
+      favorite_cheese: 'brie',
+      favorite_wine: 'pinot_grigio'
     }
   ]
 }
 
-export const ElectMemeLord = {
-  electMemeLord: {
-    first_name: 'Anastasia',
-    last_name: 'Sauer',
-    favorite_meme: 'arthur_clenching_fist',
-    times_won_memelord: 105
+export const ElectCheeseLord = {
+  electCheeseLord: {
+    title: 'Miss',
+    last_name: 'King',
+    times_won_cheeselord: 63
   }
 }

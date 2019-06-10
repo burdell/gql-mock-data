@@ -1,0 +1,30 @@
+{
+  "data": {
+    "cheeseFiends": [
+      {
+        "title": "Mr.",
+        "last_name": "Botsford",
+        "favorite_cheese": "muenster",
+        "favorite_wine": "pino_grigio"
+      },
+      {
+        "title": "Miss",
+        "last_name": "Spencer",
+        "favorite_cheese": "brie",
+        "favorite_wine": "pino_grigio"
+      },
+      {
+        "title": "Dr.",
+        "last_name": "Schuster",
+        "favorite_cheese": "brie",
+        "favorite_wine": "prosecco"
+      },
+      {
+        "title": "Dr.",
+        "last_name": "Mante",
+        "favorite_cheese": "muenster",
+        "favorite_wine": "merlot"
+      }
+    ]
+  }
+}
