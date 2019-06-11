@@ -6,7 +6,7 @@ export const OperationConfig: GatherOperationConfig = {
       cheeseFiendId: '1234'
     }
   },
-  cheeseFiends: {
+  GetCheeseFiends: {
     mocks: {
       Query: () => ({
         cheeseFiends: () => [

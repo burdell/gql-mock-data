@@ -2,15 +2,16 @@ import { GraphQLSchema } from 'graphql'
 import { printSchema } from 'graphql/utilities/schemaPrinter'
 import { makeExecutableSchema, addMockFunctionsToSchema } from 'graphql-tools'
 import { name } from 'faker'
+import { writeToFile } from '../../write-to-file'
 
 const globalMocks = {
   CheeseFiend: () => ({
     title: name.prefix(),
     last_name: name.lastName()
+  }),
+  Query: () => ({
+    cheeseFiends: () => [{}, {}, {}, {}]
   })
-  // Query: () => ({
-  //   cheeseFiends: () => [{}, {}, {}, {}]
-  // })
 }
 
 export function addMocks(schema: GraphQLSchema, mocks = {}) {

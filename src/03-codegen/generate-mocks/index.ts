@@ -5,6 +5,7 @@ import { GatherMockedData } from './types'
 import { mockSchema, addMocks } from './schema'
 import { OperationConfig } from './operation-config'
 import { getOperations } from './operations'
+import { writeToFile } from '../../write-to-file'
 
 export const plugin: PluginFunction = async (
   schema: GraphQLSchema,
@@ -31,7 +32,6 @@ export const plugin: PluginFunction = async (
   })
 
   return generateTSFile(mockData)
-  // return JSON.stringify(documents)
 }
 
 async function asyncForEach<T>(
