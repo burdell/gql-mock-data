@@ -7,17 +7,17 @@ export const OperationConfig: GatherOperationConfig = {
     }
   },
   GetCheeseFiends: {
-    mocks: {
-      Query: () => ({
-        cheeseFiends: () => [
-          { title: 'Darth' },
-          { title: 'Darth' },
-          { title: 'Darth' },
-          { title: 'Darth' },
-          { title: 'Darth' },
-          { title: 'Darth' }
-        ]
-      })
-    }
+    // mocks: {
+    //   Query: () => ({
+    //     cheeseFiends: () => [
+    //       { title: 'Darth' },
+    //       { title: 'Darth' },
+    //       { title: 'Darth' },
+    //       { title: 'Darth' },
+    //       { title: 'Darth' },
+    //       { title: 'Darth' }
+    //     ]
+    //   })
+    // }
   }
 }

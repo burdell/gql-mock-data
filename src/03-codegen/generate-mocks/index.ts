@@ -1,11 +1,11 @@
-import { GraphQLSchema, graphql } from 'graphql'
+import { graphql, GraphQLSchema } from 'graphql'
+
 import { Types, PluginFunction } from '@graphql-codegen/plugin-helpers'
 
 import { GatherMockedData } from './types'
 import { mockSchema, addMocks } from './schema'
 import { OperationConfig } from './operation-config'
 import { getOperations } from './operations'
-import { writeToFile } from '../../write-to-file'
 
 export const plugin: PluginFunction = async (
   schema: GraphQLSchema,

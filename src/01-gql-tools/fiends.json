@@ -2,27 +2,33 @@
   "data": {
     "cheeseFiends": [
       {
-        "title": "Mr.",
-        "last_name": "Botsford",
+        "title": "Darth",
+        "last_name": "Friesen",
         "favorite_cheese": "muenster",
-        "favorite_wine": "pino_grigio"
+        "favorite_wine": "pinot_grigio"
+      },
+      {
+        "title": "Dr.",
+        "last_name": "King",
+        "favorite_cheese": "cheez_whiz",
+        "favorite_wine": "merlot"
       },
       {
         "title": "Miss",
-        "last_name": "Spencer",
-        "favorite_cheese": "brie",
-        "favorite_wine": "pino_grigio"
+        "last_name": "Legros",
+        "favorite_cheese": "paneer",
+        "favorite_wine": "merlot"
       },
       {
         "title": "Dr.",
-        "last_name": "Schuster",
-        "favorite_cheese": "brie",
-        "favorite_wine": "prosecco"
+        "last_name": "Quitzon",
+        "favorite_cheese": "paneer",
+        "favorite_wine": "pinot_grigio"
       },
       {
-        "title": "Dr.",
-        "last_name": "Mante",
-        "favorite_cheese": "muenster",
+        "title": "Ms.",
+        "last_name": "Marks",
+        "favorite_cheese": "brie",
         "favorite_wine": "merlot"
       }
     ]

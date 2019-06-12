@@ -7,7 +7,10 @@
   {
     "name": "ElectCheeseLord",
     "variables": [
-      "cheeseFiendId"
+      {
+        "name": "cheeseFiendId",
+        "type": "ID"
+      }
     ],
     "operationString": "mutation ElectCheeseLord($cheeseFiendId: ID!) {\n  electCheeseLord(cheeseFiendId: $cheeseFiendId) {\n    title\n    last_name\n    times_won_cheeselord\n  }\n}"
   }

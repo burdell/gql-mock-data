@@ -1,9 +1,10 @@
 import { makeExecutableSchema, addMockFunctionsToSchema } from 'graphql-tools'
 import { graphql } from 'graphql'
-import { name } from 'faker'
+import * as faker from 'faker'
 
 import { writeToFile } from '../write-to-file'
 
+/*** SCHEMA */
 export const typeDefs = `
   enum Wine {
     pinot_grigio
@@ -42,6 +43,7 @@ export const typeDefs = `
   }
 `
 
+/** OPERATIONS */
 const source = `
   query GetCheeseFiends {
     cheeseFiends {
@@ -63,21 +65,21 @@ const source = `
 
 const schema = makeExecutableSchema({ typeDefs })
 addMockFunctionsToSchema({
-  schema,
-  mocks: {
-    CheeseFiend: () => ({
-      title: name.prefix(),
-      last_name: name.lastName()
-    }),
-    Query: () => ({
-      cheeseFiends: () => [{}, {}, {}, {}]
-    }),
-    Int: () => {
-      const min = Math.ceil(200)
-      const max = Math.floor(0)
-      return Math.floor(Math.random() * (max - min + 1)) + min
-    }
-  }
+  schema
+  // mocks: {
+  //   CheeseFiend: () => ({
+  //     title: faker.name.prefix(),
+  //     last_name: faker.name.lastName()
+  //   }),
+  //   Query: () => ({
+  //     cheeseFiends: () => [{ title: 'Darth' }, {}, {}, {}, {}]
+  //   }),
+  //   Int: () => {
+  //     const min = Math.ceil(200)
+  //     const max = Math.floor(0)
+  //     return Math.floor(Math.random() * (max - min + 1)) + min
+  //   }
+  // }
 })
 
 graphql({ schema, source, operationName: 'GetCheeseFiends' }).then(result =>

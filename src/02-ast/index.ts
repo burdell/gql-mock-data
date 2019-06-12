@@ -1,4 +1,4 @@
-import { parse, print } from 'graphql/language'
+import { parse, print, visit } from 'graphql/language'
 import { writeToFile } from '../write-to-file'
 
 const source = `
@@ -27,10 +27,28 @@ const operations = ast.definitions
   .filter(def => def.kind === 'OperationDefinition')
   .map((def: any) => ({
     name: def.name.value,
-    variables: def.variableDefinitions.map(
-      (variable: any) => variable.variable.name.value
-    ),
+    variables: def.variableDefinitions.map((variable: any) => ({
+      name: variable.variable.name.value,
+      type: getVariableType(variable)
+    })),
     operationString: print(def)
   }))
+
+function getVariableType(variable: any) {
+  let variableType: string | null = null
+  visit(variable, {
+    enter(node: any) {
+      if (node.type && node.type.name) {
+        variableType = node.type.name.value
+      }
+      return
+    },
+    leave() {
+      return
+    }
+  })
+
+  return variableType
+}
 
 writeToFile(operations, __dirname, 'massaged.json')
