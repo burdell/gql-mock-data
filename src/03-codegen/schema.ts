@@ -15,6 +15,11 @@ export const typeDefs = `
     cheez_whiz
   }
 
+  type Pairing {
+    cheese: Cheese
+    wine: Wine
+  }
+
   type CheeseFan {
     id: ID!
     title: String!
@@ -26,6 +31,7 @@ export const typeDefs = `
 
   type Query {
     cheeseFans: [CheeseFan!]!
+    pairing: Pairing!
   }
 
   type Mutation {

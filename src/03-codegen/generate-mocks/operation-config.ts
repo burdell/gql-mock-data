@@ -6,18 +6,18 @@ export const OperationConfig: GatherOperationConfig = {
       cheeseFanId: '1234'
     }
   },
-  GetCheeseFiends: {
-    // mocks: {
-    //   Query: () => ({
-    //     cheeseFiends: () => [
-    //       { title: 'Darth' },
-    //       { title: 'Darth' },
-    //       { title: 'Darth' },
-    //       { title: 'Darth' },
-    //       { title: 'Darth' },
-    //       { title: 'Darth' }
-    //     ]
-    //   })
-    // }
+  GetCheeseFans: {
+    mocks: {
+      Query: () => ({
+        cheeseFans: () => [
+          { title: 'Darth' },
+          { title: 'Darth' },
+          { title: 'Darth' },
+          { title: 'Darth' },
+          { title: 'Darth' },
+          { title: 'Darth' }
+        ]
+      })
+    }
   }
 }

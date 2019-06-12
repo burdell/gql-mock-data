@@ -3,33 +3,33 @@
     "cheeseFans": [
       {
         "title": "Darth",
-        "last_name": "Wehner",
+        "last_name": "Hagenes",
         "favorite_cheese": "brie",
         "favorite_wine": "strawwberrry_wine"
       },
       {
+        "title": "Ms.",
+        "last_name": "McClure",
+        "favorite_cheese": "paneer",
+        "favorite_wine": "pinot_grigio"
+      },
+      {
+        "title": "Dr.",
+        "last_name": "Bauch",
+        "favorite_cheese": "cheez_whiz",
+        "favorite_wine": "strawwberrry_wine"
+      },
+      {
         "title": "Miss",
-        "last_name": "Abernathy",
+        "last_name": "Fadel",
         "favorite_cheese": "brie",
         "favorite_wine": "merlot"
       },
       {
-        "title": "Mrs.",
-        "last_name": "Wintheiser",
-        "favorite_cheese": "brie",
-        "favorite_wine": "prosecco"
-      },
-      {
-        "title": "Mrs.",
-        "last_name": "O'Conner",
+        "title": "Ms.",
+        "last_name": "Walker",
         "favorite_cheese": "muenster",
-        "favorite_wine": "prosecco"
-      },
-      {
-        "title": "Miss",
-        "last_name": "Schaden",
-        "favorite_cheese": "muenster",
-        "favorite_wine": "pinot_grigio"
+        "favorite_wine": "strawwberrry_wine"
       }
     ]
   }

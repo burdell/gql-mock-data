@@ -65,21 +65,21 @@ const source = `
 
 const schema = makeExecutableSchema({ typeDefs })
 addMockFunctionsToSchema({
-  schema
-  // mocks: {
-  //   CheeseFan: () => ({
-  //     title: faker.name.prefix(),
-  //     last_name: faker.name.lastName()
-  //   }),
-  //   Query: () => ({
-  //     cheeseFans: () => [{ title: 'Darth' }, {}, {}, {}, {}]
-  //   }),
-  //   Int: () => {
-  //     const min = Math.ceil(200)
-  //     const max = Math.floor(0)
-  //     return Math.floor(Math.random() * (max - min + 1)) + min
-  //   }
-  // }
+  schema,
+  mocks: {
+    CheeseFan: () => ({
+      title: faker.name.prefix(),
+      last_name: faker.name.lastName()
+    }),
+    Query: () => ({
+      cheeseFans: () => [{ title: 'Darth' }, {}, {}, {}, {}]
+    }),
+    Int: () => {
+      const min = Math.ceil(200)
+      const max = Math.floor(0)
+      return Math.floor(Math.random() * (max - min + 1)) + min
+    }
+  }
 })
 
 graphql({ schema, source, operationName: 'GetCheeseFans' }).then(result =>
