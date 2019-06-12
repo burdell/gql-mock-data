@@ -20,7 +20,7 @@ export const typeDefs = `
     cheez_whiz
   }
 
-  type CheeseFiend {
+  type CheeseFan {
     id: ID!
     title: String!
     last_name: String!
@@ -30,11 +30,11 @@ export const typeDefs = `
   }
 
   type Query {
-    cheeseFiends: [CheeseFiend!]!
+    cheeseFans: [CheeseFan!]!
   }
 
   type Mutation {
-    electCheeseLord(cheeseFiendId: ID!): CheeseFiend!
+    electCheeseLord(cheeseFanId: ID!): CheeseFan!
   }
 
   schema {
@@ -45,8 +45,8 @@ export const typeDefs = `
 
 /** OPERATIONS */
 const source = `
-  query GetCheeseFiends {
-    cheeseFiends {
+  query GetCheeseFans {
+    cheeseFans {
       title
       last_name
       favorite_cheese
@@ -54,8 +54,8 @@ const source = `
     }
   }
 
-  mutation ElectCheeseLord($cheeseFiendId: ID!) {
-    electCheeseLord(cheeseFiendId: $cheeseFiendId) {
+  mutation ElectCheeseLord($cheeseFanId: ID!) {
+    electCheeseLord(cheeseFanId: $cheeseFanId) {
       title
       last_name      
       times_won_cheeselord
@@ -67,12 +67,12 @@ const schema = makeExecutableSchema({ typeDefs })
 addMockFunctionsToSchema({
   schema
   // mocks: {
-  //   CheeseFiend: () => ({
+  //   CheeseFan: () => ({
   //     title: faker.name.prefix(),
   //     last_name: faker.name.lastName()
   //   }),
   //   Query: () => ({
-  //     cheeseFiends: () => [{ title: 'Darth' }, {}, {}, {}, {}]
+  //     cheeseFans: () => [{ title: 'Darth' }, {}, {}, {}, {}]
   //   }),
   //   Int: () => {
   //     const min = Math.ceil(200)
@@ -82,12 +82,12 @@ addMockFunctionsToSchema({
   // }
 })
 
-graphql({ schema, source, operationName: 'GetCheeseFiends' }).then(result =>
-  writeToFile(result, __dirname, 'fiends.json')
+graphql({ schema, source, operationName: 'GetCheeseFans' }).then(result =>
+  writeToFile(result, __dirname, 'fans.json')
 )
 graphql({
   schema,
   source,
   operationName: 'ElectCheeseLord',
-  variableValues: { cheeseFiendId: '1' }
+  variableValues: { cheeseFanId: '1' }
 }).then(result => writeToFile(result, __dirname, 'cheeselord.json'))

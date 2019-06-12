@@ -3,7 +3,7 @@ import { GatherOperationConfig } from './types'
 export const OperationConfig: GatherOperationConfig = {
   ElectCheeseLord: {
     input: {
-      cheeseFiendId: '1234'
+      cheeseFanId: '1234'
     }
   },
   GetCheeseFiends: {

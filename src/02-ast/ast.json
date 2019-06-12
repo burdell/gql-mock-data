@@ -6,10 +6,10 @@
       "operation": "query",
       "name": {
         "kind": "Name",
-        "value": "GetCheeseFiends",
+        "value": "GetCheeseFans",
         "loc": {
-          "start": 9,
-          "end": 24
+          "start": 7,
+          "end": 20
         }
       },
       "variableDefinitions": [],
@@ -21,10 +21,10 @@
             "kind": "Field",
             "name": {
               "kind": "Name",
-              "value": "cheeseFiends",
+              "value": "cheeseFans",
               "loc": {
-                "start": 31,
-                "end": 43
+                "start": 25,
+                "end": 35
               }
             },
             "arguments": [],
@@ -38,15 +38,15 @@
                     "kind": "Name",
                     "value": "title",
                     "loc": {
-                      "start": 52,
-                      "end": 57
+                      "start": 42,
+                      "end": 47
                     }
                   },
                   "arguments": [],
                   "directives": [],
                   "loc": {
-                    "start": 52,
-                    "end": 57
+                    "start": 42,
+                    "end": 47
                   }
                 },
                 {
@@ -55,15 +55,15 @@
                     "kind": "Name",
                     "value": "last_name",
                     "loc": {
-                      "start": 64,
-                      "end": 73
+                      "start": 52,
+                      "end": 61
                     }
                   },
                   "arguments": [],
                   "directives": [],
                   "loc": {
-                    "start": 64,
-                    "end": 73
+                    "start": 52,
+                    "end": 61
                   }
                 },
                 {
@@ -72,15 +72,15 @@
                     "kind": "Name",
                     "value": "favorite_cheese",
                     "loc": {
-                      "start": 80,
-                      "end": 95
+                      "start": 66,
+                      "end": 81
                     }
                   },
                   "arguments": [],
                   "directives": [],
                   "loc": {
-                    "start": 80,
-                    "end": 95
+                    "start": 66,
+                    "end": 81
                   }
                 },
                 {
@@ -89,37 +89,37 @@
                     "kind": "Name",
                     "value": "favorite_wine",
                     "loc": {
-                      "start": 102,
-                      "end": 115
+                      "start": 86,
+                      "end": 99
                     }
                   },
                   "arguments": [],
                   "directives": [],
                   "loc": {
-                    "start": 102,
-                    "end": 115
+                    "start": 86,
+                    "end": 99
                   }
                 }
               ],
               "loc": {
-                "start": 44,
-                "end": 121
+                "start": 36,
+                "end": 103
               }
             },
             "loc": {
-              "start": 31,
-              "end": 121
+              "start": 25,
+              "end": 103
             }
           }
         ],
         "loc": {
-          "start": 25,
-          "end": 125
+          "start": 21,
+          "end": 105
         }
       },
       "loc": {
-        "start": 3,
-        "end": 125
+        "start": 1,
+        "end": 105
       }
     },
     {
@@ -129,8 +129,8 @@
         "kind": "Name",
         "value": "ElectCheeseLord",
         "loc": {
-          "start": 138,
-          "end": 153
+          "start": 116,
+          "end": 131
         }
       },
       "variableDefinitions": [
@@ -140,15 +140,15 @@
             "kind": "Variable",
             "name": {
               "kind": "Name",
-              "value": "cheeseFiendId",
+              "value": "cheeseFanId",
               "loc": {
-                "start": 155,
-                "end": 168
+                "start": 133,
+                "end": 144
               }
             },
             "loc": {
-              "start": 154,
-              "end": 168
+              "start": 132,
+              "end": 144
             }
           },
           "type": {
@@ -159,24 +159,24 @@
                 "kind": "Name",
                 "value": "ID",
                 "loc": {
-                  "start": 170,
-                  "end": 172
+                  "start": 146,
+                  "end": 148
                 }
               },
               "loc": {
-                "start": 170,
-                "end": 172
+                "start": 146,
+                "end": 148
               }
             },
             "loc": {
-              "start": 170,
-              "end": 173
+              "start": 146,
+              "end": 149
             }
           },
           "directives": [],
           "loc": {
-            "start": 154,
-            "end": 173
+            "start": 132,
+            "end": 149
           }
         }
       ],
@@ -190,8 +190,8 @@
               "kind": "Name",
               "value": "electCheeseLord",
               "loc": {
-                "start": 181,
-                "end": 196
+                "start": 155,
+                "end": 170
               }
             },
             "arguments": [
@@ -199,30 +199,30 @@
                 "kind": "Argument",
                 "name": {
                   "kind": "Name",
-                  "value": "cheeseFiendId",
+                  "value": "cheeseFanId",
                   "loc": {
-                    "start": 197,
-                    "end": 210
+                    "start": 171,
+                    "end": 182
                   }
                 },
                 "value": {
                   "kind": "Variable",
                   "name": {
                     "kind": "Name",
-                    "value": "cheeseFiendId",
+                    "value": "cheeseFanId",
                     "loc": {
-                      "start": 213,
-                      "end": 226
+                      "start": 185,
+                      "end": 196
                     }
                   },
                   "loc": {
-                    "start": 212,
-                    "end": 226
+                    "start": 184,
+                    "end": 196
                   }
                 },
                 "loc": {
-                  "start": 197,
-                  "end": 226
+                  "start": 171,
+                  "end": 196
                 }
               }
             ],
@@ -236,15 +236,15 @@
                     "kind": "Name",
                     "value": "title",
                     "loc": {
-                      "start": 236,
-                      "end": 241
+                      "start": 204,
+                      "end": 209
                     }
                   },
                   "arguments": [],
                   "directives": [],
                   "loc": {
-                    "start": 236,
-                    "end": 241
+                    "start": 204,
+                    "end": 209
                   }
                 },
                 {
@@ -253,15 +253,15 @@
                     "kind": "Name",
                     "value": "last_name",
                     "loc": {
-                      "start": 248,
-                      "end": 257
+                      "start": 214,
+                      "end": 223
                     }
                   },
                   "arguments": [],
                   "directives": [],
                   "loc": {
-                    "start": 248,
-                    "end": 257
+                    "start": 214,
+                    "end": 223
                   }
                 },
                 {
@@ -270,42 +270,42 @@
                     "kind": "Name",
                     "value": "times_won_cheeselord",
                     "loc": {
-                      "start": 270,
-                      "end": 290
+                      "start": 234,
+                      "end": 254
                     }
                   },
                   "arguments": [],
                   "directives": [],
                   "loc": {
-                    "start": 270,
-                    "end": 290
+                    "start": 234,
+                    "end": 254
                   }
                 }
               ],
               "loc": {
-                "start": 228,
-                "end": 296
+                "start": 198,
+                "end": 258
               }
             },
             "loc": {
-              "start": 181,
-              "end": 296
+              "start": 155,
+              "end": 258
             }
           }
         ],
         "loc": {
-          "start": 175,
-          "end": 300
+          "start": 151,
+          "end": 260
         }
       },
       "loc": {
-        "start": 129,
-        "end": 300
+        "start": 107,
+        "end": 260
       }
     }
   ],
   "loc": {
     "start": 0,
-    "end": 301
+    "end": 261
   }
 }

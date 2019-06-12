@@ -1,17 +1,17 @@
 [
   {
-    "name": "GetCheeseFiends",
+    "name": "GetCheeseFans",
     "variables": [],
-    "operationString": "query GetCheeseFiends {\n  cheeseFiends {\n    title\n    last_name\n    favorite_cheese\n    favorite_wine\n  }\n}"
+    "operationString": "query GetCheeseFans {\n  cheeseFans {\n    title\n    last_name\n    favorite_cheese\n    favorite_wine\n  }\n}"
   },
   {
     "name": "ElectCheeseLord",
     "variables": [
       {
-        "name": "cheeseFiendId",
+        "name": "cheeseFanId",
         "type": "ID"
       }
     ],
-    "operationString": "mutation ElectCheeseLord($cheeseFiendId: ID!) {\n  electCheeseLord(cheeseFiendId: $cheeseFiendId) {\n    title\n    last_name\n    times_won_cheeselord\n  }\n}"
+    "operationString": "mutation ElectCheeseLord($cheeseFanId: ID!) {\n  electCheeseLord(cheeseFanId: $cheeseFanId) {\n    title\n    last_name\n    times_won_cheeselord\n  }\n}"
   }
 ]

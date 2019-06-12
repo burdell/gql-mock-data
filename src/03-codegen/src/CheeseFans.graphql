@@ -1,5 +1,5 @@
-query GetCheeseFiends {
-  cheeseFiends {
+query GetCheeseFans {
+  cheeseFans {
     title
     last_name
     favorite_cheese

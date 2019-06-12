@@ -15,7 +15,7 @@ export const typeDefs = `
     cheez_whiz
   }
 
-  type CheeseFiend {
+  type CheeseFan {
     id: ID!
     title: String!
     last_name: String!
@@ -25,11 +25,11 @@ export const typeDefs = `
   }
 
   type Query {
-    cheeseFiends: [CheeseFiend!]!
+    cheeseFans: [CheeseFan!]!
   }
 
   type Mutation {
-    electCheeseLord(cheeseFiendId: ID!): CheeseFiend!
+    electCheeseLord(cheeseFanId: ID!): CheeseFan!
   }
 
   schema {

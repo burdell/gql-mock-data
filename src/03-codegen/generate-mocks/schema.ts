@@ -5,19 +5,21 @@ import { name } from 'faker'
 import { writeToFile } from '../../write-to-file'
 
 const globalMocks = {
-  CheeseFiend: () => ({
+  CheeseFan: () => ({
     title: name.prefix(),
     last_name: name.lastName()
   }),
-  Query: () => ({
-    cheeseFiends: () => [{}, {}, {}, {}]
-  })
+  Int: () => {
+    const min = Math.ceil(200)
+    const max = Math.floor(0)
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  }
 }
 
-export function addMocks(schema: GraphQLSchema, mocks = {}) {
+export function addMocks(schema: GraphQLSchema, operationMocks = {}) {
   addMockFunctionsToSchema({
     schema,
-    mocks: mergeResolvers(globalMocks, mocks)
+    mocks: mergeResolvers(globalMocks, operationMocks)
   })
 }
 
